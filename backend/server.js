@@ -5,7 +5,6 @@ import products from './data/products.js';
 dotenv.config();
 const app = express();
 
-
 app.get('/', (req, res) => {
     res.send('api is running...')
 })
