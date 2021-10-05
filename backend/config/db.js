@@ -8,10 +8,10 @@ const connectDB = async () => {
             // useCreateIndex: true // in taturial need to write:  useCreateIndex: true (but its not working)
         })
 
-        console.log(`MongoDB connected: ${conn.connection.host}`);
+        console.log(`MongoDB connected: ${conn.connection.host}`.cyan.underline);
 
     } catch (error) {
-        console.error(`Error: ${error.message}`)
+        console.error(`Error: ${error.message}`.red.underline.bold)
         process.exit(1)
     }
 }
