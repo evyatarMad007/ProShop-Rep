@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, Image, ListGroup, Card, Button, Form } from "react-bootstrap";
 import  Rating  from "../components/Rating";
-import { listProductsDetails } from '../actions/productActions';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
+import { listProductsDetails } from '../actions/productActions';
 
 const ProductScreen = ({ history, match }) => {
     
-    const [qty, setQty] = useState(0)
+    const [qty, setQty] = useState(1)
     
     const dispatch = useDispatch();
-    const productDetails = useSelector(state => state.productDetails)
+
+    const productDetails = useSelector((state) => state.productDetails)
     const { loading, error, product } = productDetails
 
 
    useEffect(() => {
-        
         dispatch(listProductsDetails(match.params.id))
    }, [dispatch, match])
 
