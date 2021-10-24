@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import colors from 'colors';
-import { notFound, errorHandler } from './middleWare/errorMiddleWare.js'
+import { notFound, errorHandler } from './middleWare/errorMiddleware.js'
 import connectDB from './config/db.js';
 import productRoutes from './routes/productRoutes.js';
 import userRoutes from './routes/userRoutes.js';
